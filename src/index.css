@@ -18,8 +18,8 @@ body {
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 15%;
+  aspect-ratio: 1;
   border-radius: 20px;
 }
 
@@ -71,6 +71,7 @@ body {
 .searchInput {
   height: 32px;
   width: 18%;
+  min-width: 180px;
   border-radius: 5%;
 }
 

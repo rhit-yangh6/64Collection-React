@@ -4,7 +4,7 @@ import Exotic from "./exotic.png";
 import Hatchback from "./hatchback.png";
 import Limousine from "./limousine.png";
 import Luxury from "./luxury.png";
-import Minicar from "./minicar.png";
+import Microcar from "./microcar.png";
 import MiniTruck from "./minitruck.png";
 import MPV from "./mpv.png";
 import Pickup from "./pickup.png";
@@ -24,7 +24,7 @@ const images = {
   Hatchback,
   Limousine,
   Luxury,
-  Minicar,
+  Microcar,
   MiniTruck,
   MPV,
   Pickup,

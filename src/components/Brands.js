@@ -1,5 +1,4 @@
-import React from 'react';
-import {useState, useEffect} from 'react'
+import React, {useEffect, useState} from 'react';
 import Brand from './Brand';
 import Button from "./Button";
 
