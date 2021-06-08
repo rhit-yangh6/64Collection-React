@@ -1,14 +1,17 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const Brand = ({ brand }) => {
+const Brand = ({brand}) => {
   return (
-    <div className='brand'>
-      <img className='brandIcon' src={brand.iconUrl} alt={`${brand.name}-icon`}/>
-      <div>
-        <h1>{brand.name}</h1>
-        <h2>{brand.country}</h2>
+    <Link className='linkedCard' to={`/brand?brandId=${brand.id}`}>
+      <div className='brand'>
+        <img className='brandIcon' src={brand.iconUrl} alt={`${brand.name}-icon`}/>
+        <div>
+          <h1>{brand.name}</h1>
+          <h2>{brand.country}</h2>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

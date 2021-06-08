@@ -1,7 +1,13 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
+import Button from "./Button";
+import Type from "./Type";
+
+const axios = require('axios').default
 
 const Types = () => {
+
+  const [keyword, setKeyword] = useState("")
 
   const [types, setTypes] = useState([
     {
@@ -15,13 +21,35 @@ const Types = () => {
     }
   ])
 
+  // Retrieve Brands
+  const fetchTypes = async (searchString, brandId) => {
+    try {
+      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/type/brand_list?keyword=${searchString}&brandId=${brandId}`)
+      setTypes(rsp.data.data)
+    } catch (err) {
+      console.error(err)
+      setTypes([])
+    }
+  }
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    fetchTypes(keyword, urlParams.get('brandId')).then()
+  }, [keyword])
+
+  const onSearchButtonClick = () => {
+    setKeyword(document.getElementById('typeSearchInput').value)
+  }
+
   return (
     <div>
+      <div className='searchBox'>
+        <input id="typeSearchInput" className='searchInput'/>
+        <Button text='Search' onClick={onSearchButtonClick}/>
+      </div>
       <div className='typesContainer'>
         {types.map((type) => (
-          <div>
-
-          </div>
+          <Type type={type}/>
         ))
         }
       </div>

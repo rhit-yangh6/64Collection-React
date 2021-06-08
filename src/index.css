@@ -43,7 +43,7 @@ body {
   grid-template-columns: 1fr;
 }
 
-.brand {
+.brand, .type {
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
@@ -51,7 +51,12 @@ body {
   cursor: pointer;
 }
 
-.brandIcon {
+.linkedCard {
+  text-decoration: none;
+  color: black;
+}
+
+.brandIcon, .typeCategoryIcon {
   width: 60px;
   height: 60px;
   margin-right: 20px;
