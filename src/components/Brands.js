@@ -1,17 +1,57 @@
 import React from 'react';
+import {useState, useEffect} from 'react'
 import Brand from './Brand';
+import Button from "./Button";
 
+const axios = require('axios').default
 
-const Brands = ({brands}) => {
+const Brands = () => {
+
+  const [keyword, setKeyword] = useState("")
+
+  const [brands, setBrands] = useState([
+    {
+      id: 'id',
+      name: 'Name',
+      country: 'Country',
+      iconUrl: 'iconUrl'
+    }
+  ])
+
+  // Retrieve Brands
+  const fetchBrands = async (searchString) => {
+    try {
+      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/brand/list?keyword=${searchString}`)
+      setBrands(rsp.data.data)
+    } catch (err) {
+      console.error(err)
+      setBrands([])
+    }
+  }
+
+  useEffect(() => {
+    fetchBrands(keyword).then()
+  }, [keyword])
+
+  const onSearchButtonClick = () => {
+    setKeyword(document.getElementById('brandSearchInput').value)
+  }
+
   return (
-    <div className='brandsContainer'>
-      {brands.map((brand) => (
+    <div>
+      <div className='searchBox'>
+        <input id='brandSearchInput' className='searchInput'/>
+        <Button text='Search' onClick={onSearchButtonClick}/>
+      </div>
+      <div className='brandsContainer'>
+        {brands.map((brand) => (
           <Brand
             key={brand.id}
             brand={brand}
           />
         ))
-      }
+        }
+      </div>
     </div>
   );
 };
