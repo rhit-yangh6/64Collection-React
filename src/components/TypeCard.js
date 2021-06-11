@@ -4,9 +4,7 @@ import Images from "../images/CategoryIcons"
 
 const TypeCard = ({type}) => {
   return (
-    <Link className='linkedCard' to={{
-      pathname: `/type?typeId=${type.id}`
-    }}>
+    <Link className='linkedCard' to={`/type?typeId=${type.id}`}>
       <div className='type'>
         <img className='typeCategoryIcon' src={Images[type.category]} alt='category-icon'/>
         <div>
