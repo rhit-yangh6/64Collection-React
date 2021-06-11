@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Brand from './Brand';
+import BrandCard from './BrandCard';
 import Button from "./Button";
 
 const axios = require('axios').default
@@ -44,7 +44,7 @@ const Brands = () => {
       </div>
       <div className='brandsContainer'>
         {brands.map((brand) => (
-          <Brand
+          <BrandCard
             key={brand.id}
             brand={brand}
           />

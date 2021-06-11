@@ -2,9 +2,11 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Images from "../images/CategoryIcons"
 
-const Type = ({type}) => {
+const TypeCard = ({type}) => {
   return (
-    <Link className='linkedCard'>
+    <Link className='linkedCard' to={{
+      pathname: `/type?typeId=${type.id}`
+    }}>
       <div className='type'>
         <img className='typeCategoryIcon' src={Images[type.category]} alt='category-icon'/>
         <div>
@@ -16,4 +18,4 @@ const Type = ({type}) => {
   );
 };
 
-export default Type;
+export default TypeCard;

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Button from "./Button";
-import Type from "./Type";
+import TypeCard from "./TypeCard";
 
 const axios = require('axios').default
 
@@ -20,7 +20,7 @@ const Types = () => {
     }
   ])
 
-  // Retrieve Brands
+  // Retrieve Types
   const fetchTypes = async (searchString, brandId) => {
     try {
       const rsp = await axios.get(`http://139.196.98.81:8080/64collection/type/brand_list?keyword=${searchString}&brandId=${brandId}`)
@@ -48,7 +48,7 @@ const Types = () => {
       </div>
       <div className='typesContainer'>
         {types.map((type) => (
-          <Type type={type}/>
+          <TypeCard type={type}/>
         ))
         }
       </div>
