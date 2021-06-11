@@ -46,11 +46,10 @@ const Types = () => {
         <input id="typeSearchInput" className='searchInput'/>
         <Button text='Search' onClick={onSearchButtonClick}/>
       </div>
-      <div className='typesContainer'>
-        {types.map((type) => (
+      <div className='typesContainer'> {
+        types.map((type) => (
           <TypeCard type={type}/>
-        ))
-        }
+        ))}
       </div>
     </div>
   );
