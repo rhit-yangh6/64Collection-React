@@ -4,7 +4,7 @@ import TypeCard from "./TypeCard";
 
 const axios = require('axios').default
 
-const Types = () => {
+const BrandTypes = () => {
 
   const [keyword, setKeyword] = useState("")
 
@@ -20,7 +20,7 @@ const Types = () => {
     }
   ])
 
-  // Retrieve Types
+  // Retrieve BrandTypes
   const fetchTypes = async (searchString, brandId) => {
     try {
       const rsp = await axios.get(`http://139.196.98.81:8080/64collection/type/brand_list?keyword=${searchString}&brandId=${brandId}`)
@@ -55,4 +55,4 @@ const Types = () => {
   );
 };
 
-export default Types;
+export default BrandTypes;

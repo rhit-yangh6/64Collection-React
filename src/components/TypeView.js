@@ -17,16 +17,16 @@ const TypeView = () => {
   })
 
   const [photoArray, setPhotoArray] = useState([
-    {
-      src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-      width: 4,
-      height: 3
-    },
-    {
-      src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-      width: 1,
-      height: 1
-    }
+    // {
+    //   src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+    //   width: 4,
+    //   height: 3
+    // },
+    // {
+    //   src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+    //   width: 1,
+    //   height: 1
+    // }
   ])
 
   const fetchType = async (typeId) => {
@@ -38,8 +38,8 @@ const TypeView = () => {
       rsp.data.data.imgUrls.forEach((url) => {
         out.push({
           src: url,
-          width: 4,
-          height: 3
+          width: 3,
+          height: 2
         })
       })
       console.log(out)

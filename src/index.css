@@ -10,17 +10,27 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.site-layout-background .trigger {
+  color: white;
+  margin-left: 20px;
+}
+
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 20px;
+  background-color: midnightblue;
+  height: 64px;
+}
+
+.header span {
+  color: white;
 }
 
 .logo {
-  width: 15%;
+  width: 40px;
   aspect-ratio: 1;
-  border-radius: 20px;
+  border-radius: 15%;
 }
 
 .container {
@@ -33,22 +43,33 @@ body {
   border-radius: 5px;
 }
 
-.brandsContainer {
+.brandsContainer, .typesContainer {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.typesContainer {
+.categoriesContainer {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .brand, .type {
-  background: #f4f4f4;
+  background: #f0f0f0;
   margin: 5px;
   padding: 10px 20px;
   display: flex;
   cursor: pointer;
+}
+
+.category {
+  background: #f0f0f0;
+  margin: 5px;
+  padding: 10px 20px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .linkedCard {
@@ -60,6 +81,11 @@ body {
   width: 60px;
   height: 60px;
   margin-right: 20px;
+}
+
+.categoryIcon {
+  width: 80px;
+  height: 80px;
 }
 
 .searchBox {
@@ -140,17 +166,21 @@ footer {
 }
 
 @media (min-width: 630px) {
-  .brandsContainer {
+  .brandsContainer, .typesContainer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .typesContainer {
-    grid-template-columns: 1fr 1fr;
+  .categoriesContainer {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media (min-width: 1050px) {
   .brandsContainer {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .categoriesContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
