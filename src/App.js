@@ -22,7 +22,6 @@ const App = () => {
   const [collapsed, setCollapsed] = useState(false);
   const {Header, Content, Sider} = Layout;
 
-
   return (
     <Router>
       <Layout style={{minHeight: "100vh"}}>

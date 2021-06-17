@@ -1,0 +1,11 @@
+.homePageLogo {
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 15%;
+}
+
+.generalInfoContainer {
+    border-radius: 20%;
+    border-color: #2f54eb;
+    border-width: 1px;
+}
