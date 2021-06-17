@@ -13,9 +13,7 @@ import {
   CarOutlined,
   AppstoreOutlined,
   HomeOutlined,
-  // BulbOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined
+  BulbOutlined,
 } from '@ant-design/icons';
 import React, {useState} from "react";
 
@@ -24,13 +22,12 @@ const App = () => {
   const [collapsed, setCollapsed] = useState(false);
   const {Header, Content, Sider} = Layout;
 
-  const toggle = () => { setCollapsed(!collapsed); }
 
   return (
     <Router>
       <Layout style={{minHeight: "100vh"}}>
-        <Sider trigger={null} collapsible collapsed={collapsed}>
-          <LogoHeader collapsed={collapsed}/>
+        <Sider collapsible collapsed={collapsed} onCollapse={() => { setCollapsed(!collapsed); }} breakpoint="md">
+          <LogoHeader collapsed={collapsed} />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             <Menu.Item key="1" icon={<HomeOutlined/>}>
               <Link to='/'>
@@ -47,15 +44,15 @@ const App = () => {
                 Categories
               </Link>
             </Menu.Item>
+            <Menu.Item key="4" icon={<BulbOutlined/>}>
+              <Link to='/random'>
+                Random
+              </Link>
+            </Menu.Item>
           </Menu>
         </Sider>
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{padding: 0}}>
-            {(collapsed ?
-                <MenuUnfoldOutlined className='trigger' onClick={toggle}/>
-                :
-                <MenuFoldOutlined className='trigger' onClick={toggle}/>
-            )}
           </Header>
           <Content
             className="site-layout-background"

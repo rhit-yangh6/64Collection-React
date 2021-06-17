@@ -43,18 +43,13 @@ body {
   border-radius: 5px;
 }
 
-.brandsContainer, .typesContainer {
+.brandsContainer, .typesContainer, .categoriesContainer {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.categoriesContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .brand, .type {
-  background: #f0f0f0;
+  background: #A6A6A6;
   margin: 5px;
   padding: 10px 20px;
   display: flex;
@@ -62,7 +57,7 @@ body {
 }
 
 .category {
-  background: #f0f0f0;
+  background: #A6A6A6;
   margin: 5px;
   padding: 10px 20px;
   display: flex;
@@ -97,7 +92,7 @@ body {
 .searchInput {
   height: 32px;
   width: 18%;
-  min-width: 180px;
+  min-width: 20px;
   border-radius: 5%;
 }
 
@@ -165,7 +160,7 @@ footer {
   background-color: white;
 }
 
-@media (min-width: 630px) {
+@media (min-width: 768px) {
   .brandsContainer, .typesContainer {
     grid-template-columns: 1fr 1fr;
   }
@@ -175,7 +170,7 @@ footer {
   }
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1200px) {
   .brandsContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
