@@ -10,7 +10,9 @@ const HomePage = () => {
         <h1>Welcome to 64Collection!</h1>
       </div>
       <div className='generalInfoContainer'>
-
+        <p>Brands Count:</p>
+        <p>Cars Count:</p>
+        <p>Photos Count:</p>
       </div>
     </div>
   );
