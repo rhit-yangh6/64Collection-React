@@ -14,6 +14,7 @@ import {
   AppstoreOutlined,
   HomeOutlined,
   BulbOutlined,
+  StarOutlined
 } from '@ant-design/icons';
 import React, {useState} from "react";
 
@@ -43,7 +44,12 @@ const App = () => {
                 Categories
               </Link>
             </Menu.Item>
-            <Menu.Item key="4" icon={<BulbOutlined/>}>
+            <Menu.Item key="4" icon={<StarOutlined/>}>
+              <Link to='/featured'>
+                Featured
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="5" icon={<BulbOutlined/>}>
               <Link to='/random'>
                 Random
               </Link>
@@ -77,6 +83,9 @@ const App = () => {
                 </Route>
                 <Route path="/brand">
                   <BrandTypes/>
+                </Route>
+                <Route path="/featured">
+                  <p>aaa</p>
                 </Route>
                 <Route path="/type">
                   <TypeView/>
