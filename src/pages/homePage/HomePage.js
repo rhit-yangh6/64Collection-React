@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import Logo1024 from "../images/logo1024.png"
-import '../styles/homePage.css'
+import Logo1024 from "../../images/logo1024.png"
+import '../../styles/homePage.css'
 
 const axios = require('axios').default
 

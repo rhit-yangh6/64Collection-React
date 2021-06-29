@@ -57,6 +57,7 @@ body {
 
 .brandCardWrapper, .typeCardWrapper{
   display: flex;
+  align-items: center;
 }
 
 .linkedCard .category {

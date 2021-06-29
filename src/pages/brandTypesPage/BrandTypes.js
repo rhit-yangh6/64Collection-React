@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import Button from "./Button";
-import TypeCard from "./TypeCard";
+import Button from "../../components/Button";
+import TypeCard from "../../components/TypeCard";
 
 const axios = require('axios').default
 

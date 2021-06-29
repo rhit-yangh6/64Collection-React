@@ -1,11 +1,11 @@
 import LogoHeader from './components/LogoHeader'
-import Brands from "./components/Brands"
-import BrandTypes from "./components/BrandTypes"
+import Brands from "./pages/brandsPage/Brands"
+import BrandTypes from "./pages/brandTypesPage/BrandTypes"
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import TypeView from "./components/TypeView";
-import HomePage from "./components/HomePage";
-import Categories from "./components/Categories";
-import CategoryTypes from "./components/CategoryTypes";
+import TypeView from "./pages/typeViewPage/TypeView";
+import HomePage from "./pages/homePage/HomePage";
+import Categories from "./pages/categoriesPage/Categories";
+import CategoryTypes from "./pages/categoryTypesPage/CategoryTypes";
 import {Link} from "react-router-dom";
 import 'antd/dist/antd.css';
 import {Layout, Menu} from 'antd';
@@ -17,6 +17,7 @@ import {
   StarOutlined
 } from '@ant-design/icons';
 import React, {useState} from "react";
+import Featured from "./pages/featuredPage/Featured";
 
 const App = () => {
 
@@ -85,7 +86,7 @@ const App = () => {
                   <BrandTypes/>
                 </Route>
                 <Route path="/featured">
-                  <p>aaa</p>
+                  <Featured />
                 </Route>
                 <Route path="/type">
                   <TypeView/>

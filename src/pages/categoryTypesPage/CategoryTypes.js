@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import TypeCard from "./TypeCard";
+import TypeCard from "../../components/TypeCard";
 
 const axios = require('axios').default
 
