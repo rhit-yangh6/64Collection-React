@@ -2,6 +2,6 @@ FROM node:alpine
 WORKDIR '/app'
 
 COPY package.json .
-RUN npm install
+RUN yarn global add serve
 COPY . .
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build"]
