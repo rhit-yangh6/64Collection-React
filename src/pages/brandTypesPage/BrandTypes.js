@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import Button from "../../components/Button";
-import TypeCard from "../../components/TypeCard";
+import BrandTypeCard from "./components/BrandTypeCard";
+import { useParams } from 'react-router-dom';
 
 const axios = require('axios').default
 
 const BrandTypes = () => {
 
   const [keyword, setKeyword] = useState("")
+  const { brandId } = useParams();
 
   const [types, setTypes] = useState([
     {
@@ -32,9 +34,8 @@ const BrandTypes = () => {
   }
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    fetchTypes(keyword, urlParams.get('brandId')).then()
-  }, [keyword])
+    fetchTypes(keyword, brandId).then()
+  }, [keyword, brandId])
 
   const onSearchButtonClick = () => {
     setKeyword(document.getElementById('typeSearchInput').value)
@@ -48,7 +49,7 @@ const BrandTypes = () => {
       </div>
       <div className='typesContainer'> {
         types.map((type) => (
-          <TypeCard type={type}/>
+          <BrandTypeCard type={type}/>
         ))}
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Gallery from 'react-photo-gallery';
+import {useParams} from "react-router-dom";
 
 const axios = require('axios').default
 
@@ -15,6 +16,8 @@ const TypeView = () => {
     diecastBrand: 'j',
     viewTimes: 9
   })
+
+  const { typeId } = useParams();
 
   const [photoArray, setPhotoArray] = useState([
     // {
@@ -51,9 +54,8 @@ const TypeView = () => {
   }
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    fetchType(urlParams.get('typeId')).then()
-  }, [])
+    fetchType(typeId).then()
+  }, [typeId])
 
   return (
     <div className='typeViewContainer'>

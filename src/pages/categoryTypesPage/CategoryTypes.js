@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import TypeCard from "../../components/TypeCard";
+import CategoryTypeCard from "./components/CategoryTypeCard";
+import Images from "../../images/CategoryIcons";
+import Title from "antd/es/typography/Title";
+import {Avatar} from 'antd';
+import {useParams} from "react-router-dom";
 
 const axios = require('axios').default
 
@@ -7,8 +11,10 @@ const CategoryTypes = () => {
 
   const [types, setTypes] = useState([
     {
-      id: 'id',
-      name: 'Name',
+      typeId: 'id',
+      brandId: 'aa',
+      typeName: 'Name',
+      brandName: 'bn',
       make: 1970,
       category: 'Category',
       imgUrls: [],
@@ -16,6 +22,8 @@ const CategoryTypes = () => {
       diecastBrand: 'ddd'
     }
   ])
+
+  const { category } = useParams();
 
   // Retrieve BrandTypes
   const fetchTypes = async (category) => {
@@ -29,15 +37,17 @@ const CategoryTypes = () => {
   }
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    fetchTypes(urlParams.get('category')).then()
-  }, [])
+    fetchTypes(category).then()
+  }, [category])
 
   return (
     <div>
+      <Title>
+        <Avatar src={Images[category]} />
+      </Title>
       <div className='typesContainer'> {
         types.map((type) => (
-          <TypeCard type={type}/>
+          <CategoryTypeCard type={type}/>
         ))}
       </div>
     </div>

@@ -79,16 +79,16 @@ const App = () => {
                 <Route path="/categories">
                   <Categories/>
                 </Route>
-                <Route path="/category">
+                <Route path="/category/:category">
                   <CategoryTypes/>
                 </Route>
-                <Route path="/brand">
+                <Route path="/brand/:brandId">
                   <BrandTypes/>
                 </Route>
                 <Route path="/featured">
                   <Featured />
                 </Route>
-                <Route path="/type">
+                <Route path="/type/:typeId">
                   <TypeView/>
                 </Route>
               </Switch>
