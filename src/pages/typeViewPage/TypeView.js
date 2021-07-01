@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Gallery from 'react-photo-gallery';
 import {useParams} from "react-router-dom";
+import './styles/typeView.css'
 
 const axios = require('axios').default
 

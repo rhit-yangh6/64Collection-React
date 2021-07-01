@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import CategoryTypeCard from "./components/CategoryTypeCard";
-import Images from "../../images/CategoryIcons";
-import Title from "antd/es/typography/Title";
-import {Avatar} from 'antd';
+// import Images from "../../images/CategoryIcons";
+// import {Avatar} from 'antd';
 import {useParams} from "react-router-dom";
 
 const axios = require('axios').default
@@ -42,9 +41,9 @@ const CategoryTypes = () => {
 
   return (
     <div>
-      <Title>
-        <Avatar src={Images[category]} />
-      </Title>
+      {/*<Title>*/}
+      {/*  <Avatar src={Images[category]} />*/}
+      {/*</Title>*/}
       <div className='typesContainer'> {
         types.map((type) => (
           <CategoryTypeCard type={type}/>

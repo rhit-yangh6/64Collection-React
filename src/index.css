@@ -137,32 +137,6 @@ footer {
   text-align: center;
 }
 
-.typeViewContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.typeDetailDisplayGeneral {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.typeGeneralInfoContainer, .typeExtInfoContainer {
-  text-align: center;
-}
-
-.typeBrandImg {
-  width: 130px;
-  height: 130px;
-}
-
-.carImgGallery {
-  width: 100%;
-  background-color: white;
-}
-
 @media (min-width: 768px) {
   .brandsContainer, .typesContainer {
     grid-template-columns: 1fr 1fr;
