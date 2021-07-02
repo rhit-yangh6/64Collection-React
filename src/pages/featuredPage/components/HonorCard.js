@@ -31,7 +31,7 @@ const rewardIcon = (ranking) => {
 
 const HonorCard = ({type, ranking}) => {
   return (
-    <Link style={{width: '30%'}} to={`/type?typeId=${type.typeId}`}>
+    <Link style={{width: '30%'}} to={`/type/${type.typeId}`}>
       <Card hoverable className='honorCard'>
         <IconFont type={rewardIcon(ranking)} />
         <Avatar size={80 + (3-ranking)*15} src={type.iconUrl} shape='square'/>

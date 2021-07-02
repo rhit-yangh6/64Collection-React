@@ -75,7 +75,7 @@ const Featured = () => {
                 <List.Item
                   actions={[
                     <Button>
-                      <Link to={`/type?typeId=${type.typeId}`}>
+                      <Link to={`/type/${type.typeId}`}>
                         View
                       </Link>
                     </Button>]}

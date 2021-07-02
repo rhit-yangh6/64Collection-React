@@ -41,7 +41,7 @@ const CategoryTypes = () => {
 
   return (
     <div>
-      {/*<Title>*/}
+      {/*<Title TODO>*/}
       {/*  <Avatar src={Images[category]} />*/}
       {/*</Title>*/}
       <div className='typesContainer'> {
