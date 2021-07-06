@@ -18,6 +18,7 @@ import {
 } from '@ant-design/icons';
 import React, {useState} from "react";
 import Featured from "./pages/featuredPage/Featured";
+import Random from "./pages/randomPage/Random";
 
 const App = () => {
 
@@ -88,8 +89,11 @@ const App = () => {
                 <Route path="/featured">
                   <Featured />
                 </Route>
+                <Route path="/random">
+                  <Random />
+                </Route>
                 <Route path="/type/:typeId">
-                  <TypeView/>
+                  <TypeView />
                 </Route>
               </Switch>
             </div>

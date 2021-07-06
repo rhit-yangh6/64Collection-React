@@ -23,3 +23,20 @@
     width: 100%;
     background-color: white;
 }
+
+.carCarousel {
+    width: 200px;
+    aspect-ratio: 3/2;
+}
+
+@media(min-width: 548px) {
+    .carCarousel {
+        width: 400px;
+    }
+}
+
+@media(min-width: 768px) {
+    .carCarousel {
+        width: 600px;
+    }
+}

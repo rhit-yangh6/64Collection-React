@@ -2,10 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Avatar, Card} from 'antd';
 import {createFromIconfontCN, FireTwoTone} from '@ant-design/icons';
+import { ICONFONT_URL } from '../../../config'
 
 const IconFont = createFromIconfontCN({
   scriptUrl: [
-    '//at.alicdn.com/t/font_2638499_rd0vhi6l2oe.js'
+    ICONFONT_URL
   ],
   extraCommonProps: {
     style: {
@@ -33,7 +34,7 @@ const HonorCard = ({type, ranking}) => {
   return (
     <Link style={{width: '30%'}} to={`/type/${type.typeId}`}>
       <Card hoverable className='honorCard'>
-        <IconFont type={rewardIcon(ranking)} />
+        <IconFont type={rewardIcon(ranking)}/>
         <Avatar size={80 + (3-ranking)*15} src={type.iconUrl} shape='square'/>
         <h3><b>{type.brandName}</b></h3>
         <h3>{type.typeName}</h3>

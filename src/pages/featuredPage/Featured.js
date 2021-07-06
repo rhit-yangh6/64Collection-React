@@ -4,10 +4,11 @@ import {List, Avatar, Button} from "antd";
 import {Link} from 'react-router-dom';
 import {createFromIconfontCN, FireTwoTone} from "@ant-design/icons";
 import HonorCard from "./components/HonorCard";
+import { ICONFONT_URL } from '../../config'
 
 const IconFont = createFromIconfontCN({
   scriptUrl: [
-    '//at.alicdn.com/t/font_2638499_rd0vhi6l2oe.js'
+    ICONFONT_URL
   ]
 });
 
