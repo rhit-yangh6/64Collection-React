@@ -25,6 +25,7 @@
 }
 
 .carCarousel {
+    margin: 30px;
     width: 200px;
     aspect-ratio: 3/2;
 }

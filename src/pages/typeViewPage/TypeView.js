@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import './styles/typeView.css'
-import {Carousel, Image} from "antd";
+import {Carousel, Empty, Image} from "antd";
 
 const axios = require('axios').default
 
@@ -48,9 +48,16 @@ const TypeView = () => {
 
       <Carousel autoplay className='carCarousel'>
         {
-          brandType.imgUrls.map((p) => (
-            <Image src={p}/>
-          ))
+          brandType.imgUrls.length !== 0 ?
+            brandType.imgUrls.map((p, index) => (
+              <Image key={index} src={p}/>
+            ))
+            :
+            <Empty description={
+              <span>
+                No Image
+              </span>
+            }/>
         }
       </Carousel>
 
