@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import Logo1024 from "../../images/logo1024.png"
 import './styles/homePage.css'
+import {Typography, Col, Row, Statistic} from "antd";
 
 const axios = require('axios').default
+
+const { Title } = Typography;
 
 const HomePage = () => {
 
@@ -26,15 +29,23 @@ const HomePage = () => {
   }, [])
 
   return (
-    <div>
+    <div className='homePageWrapper'>
       <div>
-        <img className='homePageLogo' src={Logo1024} alt='64Collection Logo' />
-        <h1>Welcome to 64Collection!</h1>
+        <img className='homePageLogo' src={Logo1024} alt='64Collection Logo'/>
+        <Title>Welcome to 64Collection!</Title>
       </div>
       <div className='generalInfoContainer'>
-        <p>Brands Count:{generalData.brandsCount}</p>
-        <p>Cars Count:{generalData.carsCount}</p>
-        <p>Photos Count:{generalData.photosCount}</p>
+        <Row gutter={16}>
+          <Col>
+            <Statistic title="Brands Collected" value={generalData.brandsCount}/>
+          </Col>
+          <Col>
+            <Statistic title="Cars Collected" value={generalData.carsCount}/>
+          </Col>
+          <Col>
+            <Statistic title="Car Photos" value={generalData.photosCount}/>
+          </Col>
+        </Row>
       </div>
     </div>
   );

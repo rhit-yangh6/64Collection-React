@@ -4,8 +4,14 @@
     border-radius: 15%;
 }
 
+.homePageWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .generalInfoContainer {
-    border-radius: 20%;
-    border-color: #2f54eb;
-    border-width: 1px;
+    border-radius: 5px;
+    border: 1px solid #2f54eb;
+    padding: 20px 30px;
 }

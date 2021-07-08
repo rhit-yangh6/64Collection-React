@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import './styles/typeView.css'
-import {Carousel, Empty, Image} from "antd";
+import Images from "../../images/CategoryIcons"
+import {Carousel, Empty, Image, Avatar} from "antd";
+import {FireTwoTone} from "@ant-design/icons";
 
 const axios = require('axios').default
 
@@ -62,9 +64,9 @@ const TypeView = () => {
       </Carousel>
 
       <div className='typeExtInfoContainer'>
-        <h2>Category: {brandType.category}</h2>
+        <h2><Avatar src={Images[brandType.category]} />&nbsp;&nbsp;{brandType.category}</h2>
         <h2>Diecast Brand: {brandType.diecastBrand}</h2>
-        <h2>View Times: {brandType.viewTimes}</h2>
+        <h2>View Times: <FireTwoTone twoToneColor="red"/>&nbsp;{brandType.viewTimes}</h2>
       </div>
     </div>
   );
