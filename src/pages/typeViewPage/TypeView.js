@@ -4,6 +4,7 @@ import './styles/typeView.css'
 import Images from "../../images/CategoryIcons"
 import {Carousel, Empty, Image, Avatar} from "antd";
 import {FireTwoTone} from "@ant-design/icons";
+import { API_URL } from "../../config";
 
 const axios = require('axios').default
 
@@ -25,7 +26,7 @@ const TypeView = () => {
 
   const fetchType = async (typeId) => {
     try {
-      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/type/info?typeId=${typeId}`)
+      const rsp = await axios.get(API_URL + `/type/info?typeId=${typeId}`)
       setBrandType(rsp.data.data)
     } catch (err) {
       console.error(err)
@@ -55,7 +56,8 @@ const TypeView = () => {
               <Image key={index} src={p}/>
             ))
             :
-            <Empty description={
+            <Empty
+              description={
               <span>
                 No Image
               </span>

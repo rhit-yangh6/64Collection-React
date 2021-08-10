@@ -14,11 +14,13 @@ import {
   AppstoreOutlined,
   HomeOutlined,
   BulbOutlined,
-  StarOutlined
+  StarOutlined,
+  PieChartOutlined
 } from '@ant-design/icons';
 import React, {useState} from "react";
 import Featured from "./pages/featuredPage/Featured";
 import Random from "./pages/randomPage/Random";
+import Statistics from "./pages/statisticsPage/Statistics";
 
 const App = () => {
 
@@ -56,6 +58,11 @@ const App = () => {
                 Random
               </Link>
             </Menu.Item>
+            <Menu.Item key="6" icon={<PieChartOutlined />}>
+              <Link to='/stats'>
+                Statistics
+              </Link>
+            </Menu.Item>
           </Menu>
         </Sider>
         <Layout className="site-layout">
@@ -91,6 +98,9 @@ const App = () => {
                 </Route>
                 <Route path="/random">
                   <Random />
+                </Route>
+                <Route path="/stats">
+                  <Statistics />
                 </Route>
                 <Route path="/type/:typeId">
                   <TypeView />

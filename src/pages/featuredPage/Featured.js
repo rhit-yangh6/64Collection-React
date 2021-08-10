@@ -4,7 +4,7 @@ import {List, Avatar, Button} from "antd";
 import {Link} from 'react-router-dom';
 import {createFromIconfontCN, FireTwoTone} from "@ant-design/icons";
 import HonorCard from "./components/HonorCard";
-import { ICONFONT_URL } from '../../config'
+import { ICONFONT_URL, API_URL } from '../../config'
 
 const IconFont = createFromIconfontCN({
   scriptUrl: [
@@ -41,7 +41,7 @@ const Featured = () => {
 
   const fetchFeaturedList = async (limit) => {
     try {
-      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/type/featured_list?count=${limit}`)
+      const rsp = await axios.get(API_URL + `/type/featured_list?count=${limit}`)
       setFeatured(rsp.data.data)
     } catch (err) {
       console.error(err)
