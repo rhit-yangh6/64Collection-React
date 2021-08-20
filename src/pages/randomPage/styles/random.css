@@ -1,5 +1,7 @@
 .randomIcon {
     border-radius: 50%;
+    margin-top: 20%;
+    margin-left: 45%;
 }
 
 .randomIcon:hover {

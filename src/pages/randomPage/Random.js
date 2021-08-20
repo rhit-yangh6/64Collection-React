@@ -35,7 +35,8 @@ const Random = () => {
 
   return (
     <div>
-      <IconFont  className='randomIcon' type='icon-random' onClick={fetchRandomType}/>
+      <IconFont className='randomIcon' type='icon-random' onClick={fetchRandomType}/>
+      <h1 style={{marginLeft: '41%', marginTop: 20}}>Press the Button to View a Random Car!</h1>
     </div>
   );
 };
