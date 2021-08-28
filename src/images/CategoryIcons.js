@@ -16,6 +16,9 @@ import Truck from "./truck.png";
 import Unclassified from "./unclassified.png";
 import Van from "./van.png";
 import Wagon from "./wagon.png";
+import Coupe from './coupe.png';
+import Muscle from './muscle.png';
+import Roadster from './roadster.png';
 
 const images = {
   Cabriolet,
@@ -35,7 +38,10 @@ const images = {
   Truck,
   Unclassified,
   Van,
-  Wagon
+  Wagon,
+  Coupe,
+  Muscle,
+  Roadster
 }
 
 export default images

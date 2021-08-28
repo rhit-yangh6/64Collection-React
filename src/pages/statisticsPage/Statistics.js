@@ -265,6 +265,27 @@ const Statistics = () => {
                   height: 80,
                   width: 80
                 },
+                "Coupe": {
+                  backgroundColor: {
+                    image: Images["Coupe"]
+                  },
+                  height: 80,
+                  width: 80
+                },
+                "Roadster": {
+                  backgroundColor: {
+                    image: Images["Roadster"]
+                  },
+                  height: 80,
+                  width: 80
+                },
+                "Muscle": {
+                  backgroundColor: {
+                    image: Images["Muscle"]
+                  },
+                  height: 80,
+                  width: 80
+                },
               },
             },
             emphasis: {
