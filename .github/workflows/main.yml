@@ -54,4 +54,4 @@ jobs:
           key: ${{ secrets.SERVER_SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            docker pull ghcr.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}@${{ steps.docker_build.outputs.digest }}
+            docker pull ghcr.io/${{ secrets.DOCKER_HUB_USERNAME }}/64collection-react@${{ steps.docker_build.outputs.digest }}
