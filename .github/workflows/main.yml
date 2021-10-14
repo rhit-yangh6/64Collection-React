@@ -54,4 +54,6 @@ jobs:
           key: ${{ secrets.SERVER_SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            docker rmi ${{ secrets.DOCKER_HUB_USERNAME }}/64collection-react:latest
             docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/64collection-react
+            docker run -d -p 5000:5000 ${{ secrets.DOCKER_HUB_USERNAME }}/64collection-react
