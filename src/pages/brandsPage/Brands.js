@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import BrandCard from './components/BrandCard';
-import Button from "../../components/Button";
+import Search from "antd/es/input/Search";
 
 const axios = require('axios').default
 
@@ -32,15 +32,14 @@ const Brands = () => {
     fetchBrands(keyword).then()
   }, [keyword])
 
-  const onSearchButtonClick = () => {
-    setKeyword(document.getElementById('brandSearchInput').value)
+  const onSearch = (value) => {
+    setKeyword(value);
   }
 
   return (
     <div>
       <div className='searchBox'>
-        <input id='brandSearchInput' className='searchInput'/>
-        <Button text='Search' onClick={onSearchButtonClick}/>
+        <Search placeholder="search for brands" onSearch={onSearch} enterButton />
       </div>
       <div className='brandsContainer'>
         {brands.map((brand) => (

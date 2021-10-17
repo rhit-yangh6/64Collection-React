@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import Button from "../../components/Button";
 import BrandTypeCard from "./components/BrandTypeCard";
 import { useParams } from 'react-router-dom';
+import Search from "antd/es/input/Search";
 
 const axios = require('axios').default
 
@@ -37,15 +37,14 @@ const BrandTypes = () => {
     fetchTypes(keyword, brandId).then()
   }, [keyword, brandId])
 
-  const onSearchButtonClick = () => {
-    setKeyword(document.getElementById('typeSearchInput').value)
+  const onSearch = (value) => {
+    setKeyword(value);
   }
 
   return (
     <div>
       <div className='searchBox'>
-        <input id="typeSearchInput" className='searchInput'/>
-        <Button text='Search' onClick={onSearchButtonClick}/>
+        <Search placeholder="search for brands" onSearch={onSearch} enterButton />
       </div>
       <div className='typesContainer'> {
         types.map((type) => (
