@@ -25,8 +25,6 @@ const CategoryTypes = () => {
     }
   ])
 
-  const [loading, setLoading] = useState(true);
-
   const { category } = useParams();
 
   // Retrieve BrandTypes

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card} from "antd";
 import {Link} from "react-router-dom";
-import defaultImage from "../../../images/Default_Cover.png";
+import defaultImage from "../../../images/default_cover.png";
 
 const CategoryTypeCard = ({ type }) => {
   return (

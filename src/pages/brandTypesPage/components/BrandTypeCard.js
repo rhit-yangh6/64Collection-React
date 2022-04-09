@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Images from "../../../images/CategoryIcons"
 import { Card } from "antd";
-import defaultImage from "../../../images/Default_Cover.png";
+import defaultImage from "../../../images/default_cover.png";
 
 const BrandTypeCard = ({type}) => {
   return (
