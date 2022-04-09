@@ -132,6 +132,14 @@ body {
   width: 100%;
 }
 
+.typeCardContent {
+  width: 100%;
+}
+
+.ant-card-body {
+  width: 100%;
+}
+
 footer {
   margin-top: 30px;
   text-align: center;
@@ -140,6 +148,17 @@ footer {
 .categoriesContainer {
   display: flex;
   flex-wrap: wrap;
+}
+
+.typeCoverImg {
+  width: 160px;
+  margin-left: auto;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {

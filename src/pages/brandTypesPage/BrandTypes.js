@@ -18,7 +18,8 @@ const BrandTypes = () => {
       category: 'Category',
       imgUrls: [],
       viewTimes: 0,
-      diecastBrand: 'ddd'
+      diecastBrand: 'ddd',
+      coverImgUrl: 'aaa'
     }
   ])
 

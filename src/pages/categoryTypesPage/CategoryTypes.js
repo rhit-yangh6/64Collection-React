@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import CategoryTypeCard from "./components/CategoryTypeCard";
-// import Images from "../../images/CategoryIcons";
-// import {Avatar} from 'antd';
+import Images from "../../images/CategoryIcons";
+import {Avatar, Typography} from 'antd';
 import {useParams} from "react-router-dom";
 
 const axios = require('axios').default
+
+const { Title } = Typography;
 
 const CategoryTypes = () => {
 
@@ -18,9 +20,12 @@ const CategoryTypes = () => {
       category: 'Category',
       imgUrls: [],
       viewTimes: 0,
-      diecastBrand: 'ddd'
+      diecastBrand: 'ddd',
+      coverImgUrl: 'aaa'
     }
   ])
+
+  const [loading, setLoading] = useState(true);
 
   const { category } = useParams();
 
@@ -41,9 +46,10 @@ const CategoryTypes = () => {
 
   return (
     <div>
-      {/*<Title TODO>*/}
-      {/*  <Avatar src={Images[category]} />*/}
-      {/*</Title>*/}
+      <div className='pageHeader'>
+        <Title style={{marginBottom: 0}}>Viewing Category: {category}</Title>
+        <Avatar src={Images[category]} size={50} style={{marginLeft: 20}}/>
+      </div>
       <div className='typesContainer'> {
         types.map((type) => (
           <CategoryTypeCard type={type}/>
