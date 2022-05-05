@@ -48,9 +48,9 @@ const CategoryTypes = () => {
         <Title style={{marginBottom: 0}}>Viewing Category: {category}</Title>
         <Avatar src={Images[category]} size={50} style={{marginLeft: 20}}/>
       </div>
-      <div className='brandsContainer'> {
+      <div className='typesContainer'> {
         types.map((type) => (
-          <CategoryTypeCard type={type}/>
+          <CategoryTypeCard key={type.typeId} type={type}/>
         ))}
       </div>
     </div>
