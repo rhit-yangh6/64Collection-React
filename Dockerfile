@@ -12,8 +12,6 @@ COPY . .
 RUN yarn install --production
 RUN yarn build
 
-RUN /usr/local/bin/node-prune
-
 # Stage 2: start app
 FROM node:16.10.0-alpine
 ENV NODE_ENV=development
