@@ -51,7 +51,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SERVER_SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           script: |
             docker rm $(docker stop $(docker ps -a -q --filter ancestor=${{ secrets.DOCKER_HUB_USERNAME }}/64collection-react --format="{{.ID}}"))
