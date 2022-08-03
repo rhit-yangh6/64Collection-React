@@ -108,9 +108,9 @@ const App = () => {
               </Switch>
             </div>
           </Content>
-          <Footer style={{background: 'midnightblue'}}>
-            <a href="https://beian.miit.gov.cn" style={{color: 'white'}}>沪ICP备2021024798号-1</a>
-          </Footer>
+          {/*<Footer style={{background: 'midnightblue'}}>*/}
+          {/*  <a href="https://beian.miit.gov.cn" style={{color: 'white'}}>沪ICP备2021024798号-1</a>*/}
+          {/*</Footer>*/}
         </Layout>
       </Layout>
     </Router>
