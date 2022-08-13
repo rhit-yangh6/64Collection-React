@@ -1,6 +1,6 @@
 import React from 'react';
 import {createFromIconfontCN} from '@ant-design/icons';
-import { ICONFONT_URL } from '../../config'
+import {API_URL, ICONFONT_URL} from '../../config'
 import {useHistory} from "react-router-dom";
 
 import './styles/random.css'
@@ -22,7 +22,7 @@ const Random = () => {
   const history = useHistory();
   const fetchRandomType = async () => {
     try {
-      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/type/random`)
+      const rsp = await axios.get(API_URL + `/type/random`)
       // setTypes(rsp.data.data)
       console.log(rsp.data.data)
       history.push(`/type/${rsp.data.data.id}`)

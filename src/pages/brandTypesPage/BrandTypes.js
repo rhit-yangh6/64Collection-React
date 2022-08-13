@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import BrandTypeCard from "./components/BrandTypeCard";
 import { useParams } from 'react-router-dom';
 import Search from "antd/es/input/Search";
+import {API_URL} from "../../config";
 
 const axios = require('axios').default
 
@@ -26,7 +27,7 @@ const BrandTypes = () => {
   // Retrieve BrandTypes
   const fetchTypes = async (searchString, brandId) => {
     try {
-      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/type/brand_list?keyword=${searchString}&brandId=${brandId}`)
+      const rsp = await axios.get(API_URL + `/type/brand_list?keyword=${searchString}&brandId=${brandId}`)
       setTypes(rsp.data.data)
     } catch (err) {
       console.error(err)

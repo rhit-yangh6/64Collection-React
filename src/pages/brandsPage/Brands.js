@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import BrandCard from './components/BrandCard';
 import Search from "antd/es/input/Search";
+import { ICONFONT_URL, API_URL } from '../../config'
 
 const axios = require('axios').default
 
@@ -20,7 +21,7 @@ const Brands = () => {
   // Retrieve Brands
   const fetchBrands = async (searchString) => {
     try {
-      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/brand/list?keyword=${searchString}`)
+      const rsp = await axios.get(API_URL + `/brand/list?keyword=${searchString}`)
       setBrands(rsp.data.data)
     } catch (err) {
       console.error(err)

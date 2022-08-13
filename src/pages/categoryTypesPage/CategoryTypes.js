@@ -3,6 +3,7 @@ import CategoryTypeCard from "./components/CategoryTypeCard";
 import Images from "../../images/CategoryIcons";
 import {Avatar, Typography} from 'antd';
 import {useParams} from "react-router-dom";
+import {API_URL} from "../../config";
 
 const axios = require('axios').default
 
@@ -30,7 +31,7 @@ const CategoryTypes = () => {
   // Retrieve BrandTypes
   const fetchTypes = async (category) => {
     try {
-      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/type/category_list?category=${category}`)
+      const rsp = await axios.get(API_URL + `/type/category_list?category=${category}`)
       setTypes(rsp.data.data)
     } catch (err) {
       console.error(err)

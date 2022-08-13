@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Logo1024 from "../../images/logo1024.png"
 import './styles/homePage.css'
 import {Typography, Col, Row, Statistic} from "antd";
+import {API_URL} from "../../config";
 
 const axios = require('axios').default
 
@@ -17,7 +18,7 @@ const HomePage = () => {
 
   const fetchGeneralInfo = async () => {
     try {
-      const rsp = await axios.get(`http://139.196.98.81:8080/64collection/general/info`)
+      const rsp = await axios.get(API_URL + `/general/info`)
       setGeneralData(rsp.data.data)
     } catch (err) {
       console.error(err)
